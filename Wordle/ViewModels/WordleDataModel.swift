@@ -123,7 +123,7 @@ class WordleDataModel: ObservableObject {
     }
     
     func verifyWord() -> Bool {
-        UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: currentWord)
+        return Global.commonWords.contains(currentWord)
     }
     
     func hardCorrectCheck() -> String? {
